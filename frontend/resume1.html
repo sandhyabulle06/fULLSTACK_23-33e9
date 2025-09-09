@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume Card Layout - Modern Design</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: rgb(255, 255, 255);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      padding: 30px 40px;
+    }
+
+    /* Header */
+    .header-card {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .avatar {
+      flex-shrink: 0;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #c663ff;
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+      font-size: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+      box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+    }
+
+    .header-info h1 {
+      margin: 0 0 6px;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: #222;
+    }
+
+    .header-info p {
+      margin: 2px 0;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Section cards */
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      border-bottom: 3px solid #6c63ff;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: #6c63ff;
+    }
+
+    /* Summary & Skills */
+    .summary p {
+      font-size: 1.05rem;
+      color: #444;
+      margin-top: 0;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skills li {
+      background-color: #e0dfff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      color: #4b3bff;
+      font-size: 0.95rem;
+    }
+
+    /* Projects grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #fafaff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 14px rgba(108, 99, 255, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      font-weight: 700;
+      color: #4b3bff;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+
+    /* Education */
+    .education ul {
+      list-style: none;
+      padding-left: 0;
+      color: #444;
+    }
+
+    .education li {
+      background: #f0f0ff;
+      padding: 15px 20px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .header-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      .header-info h1 {
+        font-size: 1.6rem;
+      }
+      .skills ul {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header-card">
+      <div class="avatar">S</div>
+      <div class="header-info">
+        <h1>sandhya</h1>
+        <p>Full Stack Developer</p>
+        <p>Email: bullesandhya23@gmail.com | Phone: 9346399352</p>
+      </div>
+    </header>
+
+    <section class="summary">
+      <h2>Summary</h2>
+      <p>Experienced developer skilled in building scalable web applications using modern technologies.</p>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>SQL</li>
+        <li>Git</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Project Management Dashboard</h3>
+          <p>Developed a responsive dashboard for tracking project progress, integrating real-time updates and analytics using React and Node.js.</p>
+        </article>
+        <article class="project-card">
+          <h3>E-commerce Platform</h3>
+          <p>Built a scalable e-commerce site with secure payment integration, product catalog, and user authentication using Angular and Express.</p>
+        </article>
+        <article class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>Designed and deployed a personal portfolio website showcasing skills, experience, and projects, optimized for SEO and mobile devices.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="education">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <strong>B.Tech Computer Science and Engineering (AI & ML)</strong> – Srinivasa Ramanujan Institute of Technology (2023–2027)
+        </li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
