@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <input type="text" id="myInput" placeholder="Add a task">
+  <button id="add">Add</button>
+  <ul id="myUL"></ul>
+</body>
+<script>
+$(document).ready(function(){
+  $("#add").click(function(){
+    let task = $("#myInput").val();
+    if(task){
+      $("#myUL").append("<li>" + task + "</li>");
+      $("#myInput").val('');
+    }
+  });
+});
+</script>
+</html>
+
